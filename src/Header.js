@@ -34,4 +34,4 @@ const useStyles = makeStyles({
   },
 });
 
-export default Header;
+export { Header };

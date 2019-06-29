@@ -13,19 +13,27 @@ const Nav = (props) => {
     <div>
       <Drawer open={props.isNavOpen} onClose={props.toggleNav}>
         <List className={classes.list} onClick={props.toggleNav}>
+          <ListItem button={true} component={ListLink}to="/">Home</ListItem>
           <ListItem
             button={true}
             component={ListLink}
-            to="/"
+            to="/plain-form"
           >
-            Home
+            Plain Form
           </ListItem>
           <ListItem
             button={true}
             component={ListLink}
-            to="/test-form"
+            to="/formik-hooks-form"
           >
-            Form
+            Formik Hooks Form
+          </ListItem>
+          <ListItem
+            button={true}
+            component={ListLink}
+            to="/formik-render-prop-form"
+          >
+            Formik Render Prop Form
           </ListItem>
         </List>
       </Drawer>
@@ -42,4 +50,4 @@ const useStyles = makeStyles({
   },
 });
 
-export default Nav;
+export { Nav };
