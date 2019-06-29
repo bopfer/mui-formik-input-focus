@@ -33,7 +33,8 @@ const FormikHooks = () => {
           at handleBlur (InputBase.js:318)<br/>
           at HTMLUnknownElement.callCallback (react-dom.development.js:147)
         </div>
-        There is no error when navigating from the <Link to="/">Home page</Link>.
+        There is no error when navigating from the <Link to="/">Home page</Link>.<br/>
+        Also, the error does not show on codesandbox.io.
       </h4>
       <div>
         <Input

@@ -24,7 +24,7 @@ const Nav = (props) => {
           <ListItem
             button={true}
             component={ListLink}
-            to="/plain-form"
+            to="/plain-form-set-timeout"
           >
             Plain Form w/ setTimeout focus
           </ListItem>
