@@ -24,9 +24,9 @@ const Nav = (props) => {
           <ListItem
             button={true}
             component={ListLink}
-            to="/formik-hooks-form"
+            to="/plain-form"
           >
-            Formik Hooks Form
+            Plain Form w/ setTimeout focus
           </ListItem>
           <ListItem
             button={true}
@@ -34,6 +34,13 @@ const Nav = (props) => {
             to="/formik-render-prop-form"
           >
             Formik Render Prop Form
+          </ListItem>
+          <ListItem
+            button={true}
+            component={ListLink}
+            to="/formik-hooks-form"
+          >
+            Formik Hooks Form
           </ListItem>
         </List>
       </Drawer>
@@ -43,7 +50,7 @@ const Nav = (props) => {
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 300,
   },
   fullList: {
     width: 'auto',

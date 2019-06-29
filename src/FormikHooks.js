@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useFormik, useField, FormikProvider } from 'formik';
 import { TextField } from '@material-ui/core';
 
@@ -13,6 +14,27 @@ const FormikHooks = () => {
 
   return (
     <Form initialValues={initialValues} onSubmit={onSubmit}>
+        <h2>
+          Formik form (Hooks)
+        </h2>
+      <h4>
+        Like the Plain Form, this form imperatively focuses the first field,
+        after a hacky setTimeout.
+        <br/>
+        But, focus is constantly stolen back when trying to go to any other field.
+        <br />
+        When navigating to this page from the nav Drawer, Formik/MUI also output this error:
+        <div style={{ margin: `10px`, color: `red` }}>
+          Uncaught Error: Cannot call an event handler while rendering.<br/>
+          at formik.esm.js:968<br/>
+          at formik.esm.js:975<br/>
+          at formik.esm.js:641<br/>
+          at formik.esm.js:649<br/>
+          at handleBlur (InputBase.js:318)<br/>
+          at HTMLUnknownElement.callCallback (react-dom.development.js:147)
+        </div>
+        There is no error when navigating from the <Link to="/">Home page</Link>.
+      </h4>
       <div>
         <Input
           type="text"

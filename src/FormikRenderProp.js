@@ -14,6 +14,15 @@ const FormikRenderProp = () => (
   <Formik initialValues={initialValues} onSubmit={onSubmit}>
     {formikBag => (
       <form onSubmit={formikBag.handleSubmit}>
+        <h2>
+          Formik form (Render prop)
+        </h2>
+        <h4>
+          Like the Plain Form, this form imperatively focuses the first field,
+          after a hacky setTimeout.
+          <br />
+          After that it appears to work properly.
+        </h4>
         <div>
           <Input
             type="text"
