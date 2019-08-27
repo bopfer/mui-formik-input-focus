@@ -16,20 +16,20 @@ const PlainForm = (props) => {
         the Drawer close transition is complete.
       </h4>
       <div>
-        <Input
+        <TextField
           name="firstName"
           label="First Name"
           autoFocus={true}
         />
       </div>
       <div>
-        <Input
+        <TextField
           name="lastName"
           label="Last Name"
         />
       </div>
       <div>
-        <Input
+        <TextField
           type="email"
           name="email"
           label="Email Address"
@@ -38,12 +38,5 @@ const PlainForm = (props) => {
     </form>
   );
 };
-
-const Input = (props) => (
-  <TextField
-    label={props.label}
-    autoFocus={props.autoFocus}
-  />
-);
 
 export { PlainForm };
